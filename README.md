@@ -62,10 +62,14 @@ Kemudian step yang sama dilakukan untuk mencari ip pada subnet subnet berikutnya
 - menentukan jumlah alokasi ip yang tersedia (dapat merujuk pada tabel atau menggunakan perhitungan manual)
 - range awal IP adalah [range terakhir ip]+1. contoh pada x step, range akhir adalah 192.186.7.255 maka x+1 awalnya adalah 192.186.8.0
 - range akhir IP adalah [range awal] + jumlah alokasi
-
+  
 Step di atas dilakukan secara sekuensial mengikuti tabel subnet yang disortir berdasarkan jumlah host, sehingga mendapatkan pembagian sebagai berikut : 
 
 ![image](https://github.com/fazghfr/Jarkom-Modul-4-B16-2023/assets/96367502/e32fc8c2-253f-42b0-b750-1a29bdf5811a)
+
+## Tree
+![image](https://github.com/fazghfr/Jarkom-Modul-4-B16-2023/assets/96367502/a0ea3ccf-a6bf-4a44-ac2a-48ce955ae32c)
+
 
 ## Routing VLSM
 
