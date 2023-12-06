@@ -608,12 +608,12 @@ route add -net 192.186.4.4 netmask 255.255.255.252 gw 192.186.128.1 #A13
 route add -net 192.186.4.0 netmask 255.255.255.248 gw 192.186.128.1 #A9
 
 
-route add -net 192.194.0.0 netmask 255.255.255.128 gw 10.33.0.2 #A7
+route add -net 192.194.0.0 netmask 255.255.255.128 gw 192.188.0.2 #A7
 
 
 route add -net 192.198.0.0 netmask 255.255.255.252 gw 192.187.0.2 #A18
 
-route add -net 192.186.64.0 netmask 255.255.255.252 gw 10.32.0.2 #A19
+route add -net 192.186.64.0 netmask 255.255.255.252 gw 192.187.0.2 #A19
 ```
 
 - Frieren
@@ -657,7 +657,7 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.188.0.1
 
 - Eisen
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.32.0.1
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.187.0.1
 
 route add -net 192.196.0.0 netmask 255.255.252.0 gw 192.186.64.2
 
