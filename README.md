@@ -1,5 +1,5 @@
-# Jarkom-Modul-3-B16-2023
-**Praktikum Jaringan Komputer Modul 3 Tahun 2023**
+# Jarkom-Modul-4-B16-2023
+**Praktikum Jaringan Komputer Modul 4 Tahun 2023**
 
 # Kelompok B16
 | Nama | NRP |Github |
