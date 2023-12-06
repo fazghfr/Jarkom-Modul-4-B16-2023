@@ -304,13 +304,13 @@ gateway 192.186.4.1
 #A15
 auto eth0
 iface eth0 inet static
-address 192.186.128.0
+address 192.186.128.1
 netmask 255.255.255.252
 
 #A14
 auto eth1
 iface eth1 inet static
-address 192.194.64.0
+address 192.194.64.2
 netmask 255.255.255.252
 
 #A8
@@ -573,7 +573,7 @@ netmask 255.255.252.0
 gateway 192.194.0.1
 ```
 
--RiegelCanyon
+- RiegelCanyon
 ```
 #A4
 auto eth0
@@ -581,4 +581,120 @@ iface eth0 inet static
 address 192.194.0.200
 netmask 255.255.252.0
 gateway 192.194.0.1
+```
+
+### Routing CIDR pada GNS3
+
+Berikut merupakan cara melakukan routing CIDR pada GNS3 dengan menggunakan 
+
+```
+route add -net <NID subnet> netmask <netmask> gw <IP gateway>
+```
+
+- Aura
+```bash
+route add -net 192.194.64.0 netmask 255.255.255.252 gw 192.186.128.1 #A14
+
+route add -net 1192.194.128.0 netmask 255.255.255.224 gw 192.186.128.1 #A8
+
+route add -net 192.186.8.0 netmask 255.255.255.252 gw 192.186.128.1 #A12
+
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.128.1 #A1
+
+route add -net 192.186.0.0 netmask 255.255.252.0 gw 192.186.128.1 #A2
+
+route add -net 192.186.4.4 netmask 255.255.255.252 gw 192.186.128.1 #A13
+
+route add -net 192.186.4.0 netmask 255.255.255.248 gw 192.186.128.1 #A9
+
+
+route add -net 192.194.0.0 netmask 255.255.255.128 gw 10.33.0.2 #A7
+
+
+route add -net 192.198.0.0 netmask 255.255.255.252 gw 192.187.0.2 #A18
+
+route add -net 192.186.64.0 netmask 255.255.255.252 gw 10.32.0.2 #A19
+```
+
+- Frieren
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.128.2
+
+route add -net 192.186.8.0 netmask 255.255.255.252 gw 192.186.32.1
+
+route add -net 192.186.4.4 netmask 255.255.255.252 gw 192.186.32.1
+
+route add -net 192.186.4.0 netmask 255.255.255.248 gw 192.186.32.1
+
+route add -net 192.186.0.0 netmask 255.255.252.0 gw 192.186.32.1
+
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.32.1
+```
+
+- Flamme
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.32.2
+
+route add -net 192.186.16.0 netmask 255.255.248.0 gw 192.186.8.1
+
+route add -net 192.186.4.0 netmask 0.0.0.0 gw 192.186.4.6
+```
+
+- Fern
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.8.2
+```
+
+- Himmel
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.4.5
+```
+
+- Denken
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.188.0.1
+```
+
+- Eisen
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.32.0.1
+
+route add -net 192.196.0.0 netmask 255.255.252.0 gw 192.186.64.2
+
+route add -net 192.195.0.0 netmask 255.255.255.0 gw 192.186.64.2
+
+route add -net 192.194.16.0 netmask 255.255.254.0 gw 192.194.32.2
+
+route add -net 192.194.8.0 netmask 255.255.255.252 gw 192.194.32.2
+
+route add -net 192.194.0.0 netmask 255.255.255.192 gw 192.194.32.2
+
+route add -net 192.194.4.0 netmask 255.255.252.0 gw 192.194.32.2
+```
+
+- Lugner
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.186.64.1
+```
+
+- Linie
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.194.32.1
+
+route add -net 192.194.0.0 netmask 255.255.255.192 gw 192.194.8.2
+
+route add -net 192.194.4.0 netmask 255.255.252.0 gw 192.194.8.2
+```
+
+- Lawine
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.194.8.1
+
+route add -net 192.194.4.0 netmask 255.255.252.0 gw 192.194.0.2
+
+```
+
+- Heiter
+```bash
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.194.0.1
 ```
