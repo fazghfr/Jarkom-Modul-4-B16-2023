@@ -8,3 +8,5 @@
 |Syomeron Ansell W | 5025211250 | https://github.com/Ansell10 |
 
 # Laporan Resmi
+
+## Pembagian Subnet
